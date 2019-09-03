@@ -32,6 +32,10 @@ class SignUp extends React.Component<any,ISignUpstate> {
         }
     }
 
+    linkto = () =>{
+        this.props.history.push('login')
+    }
+
     public render(){
         const { account, password, passwordConformation } = this.state;
         return (
@@ -49,6 +53,7 @@ class SignUp extends React.Component<any,ISignUpstate> {
                 <Input.Password defaultValue ={password} placeholder="请输入密码" />
                 <Input.Password defaultValue ={passwordConformation} placeholder="请确认密码" />
                 <Button onClick={this.submit}>注册</Button>
+                <Button onClick={this.linkto}>登录</Button>
             </div>
         );
     }
